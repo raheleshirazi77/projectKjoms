@@ -46,10 +46,15 @@ li {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    font-weight: bolder;
+}
+
+.listNavbar>li>a {
+    color: aliceblue;
 }
 
 /* style hoverd lists navbar */
-li:hover {
+.listNavbar>li:hover {
     border-bottom: 2px solid rgb(255, 255, 255);
     border-top: 2px solid rgb(255, 255, 253);
     transition: all 0.9s ease-in-out;
@@ -64,24 +69,80 @@ li:hover {
     -o-transition: all 0.9s ease-in-out;
 }
 
+/* style actived lists */
+.listNavbar>li:active {
+    background-color: rgb(28, 0, 80);
+    color: black;
+}
+
 
 /* style link in list navbar */
 a {
-    color: aliceblue;
+
     text-decoration: none;
 }
 
+
+/* menu in navbar */
+.menuNav {
+    background-color: rgb(162, 221, 203);
+    width: 100px;
+    text-align: right;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    color: black;
+    text-wrap: wrap;
+}
+
+#menuNavbarList {
+    position: relative;
+    top: 8px;
+    right: 28px;
+}
+
+
+/* styled list menu */
+.menuNav #listMenu {
+    list-style: none;
+    float: right;
+    padding: 8px 9px;
+    display: block;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+/* hoverd list menu keshoiee */
+.menuNav #listMenu:hover {
+    background-color: rgba(255, 217, 0, 0.51);
+}
+
+/* style menu color text */
+#listMenu {
+    color: black;
+}
+
+/* create menu keshoiee */
+.listNavbar>li:hover .menuNav {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+/* style input */
 /* style input search in section navbar header */
 .iconSearch {
     /* style button with icon btn search*/
     width: 25px;
     position: relative;
     top: 2px;
-}
-
-/* menu in navbar */
-.menuNav {
-    width: 20vh;
-    height: 200px;
-    background-color: aquamarine;
 }
