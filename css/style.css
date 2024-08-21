@@ -1,0 +1,87 @@
+/*style css title page */
+title {
+    text-transform: capitalize;
+}
+
+/* styled all element page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+/* style container page */
+.container {
+    width: 100%;
+
+    background-color: bisque;
+}
+
+/* style header image */
+.imgHead img {
+    width: 100%;
+}
+
+/*style navbar */
+.listNavbar {
+    width: 96%;
+    height: 30px;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    bottom: 37px;
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+/* style list navbar */
+li {
+    border-radius: 10px;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* style hoverd lists navbar */
+li:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(255, 255, 253);
+    transition: all 0.9s ease-in-out;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+}
+
+
+/* style link in list navbar */
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* style input search in section navbar header */
+.iconSearch {
+    /* style button with icon btn search*/
+    width: 25px;
+    position: relative;
+    top: 2px;
+}
+
+/* menu in navbar */
+.menuNav {
+    width: 20vh;
+    height: 200px;
+    background-color: aquamarine;
+}
