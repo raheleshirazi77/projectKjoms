@@ -14,7 +14,6 @@ title {
 /* style container page */
 .container {
     width: 100%;
-
     background-color: bisque;
 }
 
@@ -153,12 +152,11 @@ a {
 }
 
 /* style search navbar placeholder */
-
 #searchNavbar::placeholder {
     position: relative;
-    left: 10px;
-    padding: 10px;
+    left: 4px;
 }
+
 /* hovered input serch navbar */
 #searchNavbar:hover {
     background-color: rgba(216, 188, 255, 0.901);
@@ -178,4 +176,63 @@ a {
     -moz-transition: all 0.6s ease-in-out;
     -ms-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
+}
+
+/* section2:
+        +create signin: when clicked on the link navbar signin
+        - move the user signin
+*/
+#signin {
+    background-color: blue;
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+}
+
+/* style image in section login and signin */
+.imgLogin {
+    background: url("../images/bgLogin.jpg");
+    background-size: 370px ;
+    background-repeat: no-repeat;
+    float: right;
+    
+}
+
+/* style container image login in right */
+.imgLogin {
+    float: right;
+    width: 50%;
+    background-color: aqua;
+}
+
+/* style the container signin */
+.login {
+    width: 50%;
+    float: left;
+    background-color: brown;
+    text-align: center;
+}
+
+/* style title text and paragraf form */
+.login>h1,
+p {
+    padding: 5px;
+    margin: 5px;
+}
+
+/* style form  */
+.login>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* style inputs */
+.login>form>input {
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+
 }
