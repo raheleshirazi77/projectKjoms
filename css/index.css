@@ -95,15 +95,12 @@ a {
     color: black;
     text-wrap: wrap;
     box-shadow: 1px 1px 16px 0.6px rgba(0, 0, 0, 0.565);
-
 }
 
 #menuNavbarList {
     position: relative;
     top: 9px;
     right: 50px;
-
-
 }
 
 
@@ -184,7 +181,7 @@ a {
 */
 #signin {
     background-color: blue;
-    width: 50%;
+    width: 700px;
     position: relative;
     margin: 0 auto;
     padding: 5px;
@@ -194,10 +191,9 @@ a {
 /* style image in section login and signin */
 .imgLogin {
     background: url("../images/bgLogin.jpg");
-    background-size: 370px ;
+    background-size: 370px;
     background-repeat: no-repeat;
     float: right;
-    
 }
 
 /* style container image login in right */
@@ -233,6 +229,44 @@ p {
 .login>form>input {
     padding: 5px;
     margin: 5px;
-    width: 80%;
-
+    width: 90%;
+    height: 40px;
+    outline: none;
 }
+
+/* style button and input */
+button,
+input {
+    outline: none;
+}
+
+/* style code captcha */
+/* .btnCheck{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+} */
+/* .inner-container{
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+} */
+
+/* .inner-container:input{
+    outline: none;
+} */
+/* #captcha, #answer{
+    letter-spacing: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+} */
