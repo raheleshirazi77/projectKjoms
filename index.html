@@ -80,7 +80,16 @@
                         <!-- inputs form signin: input enter phone or tel -->
                         <input type="tel" name="tel" id="inputTel" placeholder="لطفا شماره خود را وارد کنید">
                         <!-- code captcha -->
-                         
+                        <div id="captchaBackground">
+                            <canvas id="captcha">captcha text</canvas>
+                            <input id="textBox" type="text" name="text">
+                            <div id="buttons">
+                                <input id="submitButton" type="submit">
+                                <button id="refreshButton" type="submit"></button>
+                            </div>
+                            <span id="output"></span>
+                        </div>
+
 
                     </form>
                 </div>
@@ -93,7 +102,7 @@
     </div>
 
     <!-- link script -->
-    <script src=""></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
