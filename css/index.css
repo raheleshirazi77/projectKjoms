@@ -1,7 +1,35 @@
+/* root thems */
+:root {
+    /* color */
+    --bgBody: rgb(246, 240, 255);
+    --colorTxBody: black;
+    --colorLinkLi: rgb(255, 255, 255);
+    --bgMenuNav: white;
+    --hoverMenuNav: rgba(81, 81, 255, 0.273);
+    --colorMenuNav: black;
+    --hoverSearchNav: rgb(221, 196, 255);
+    --bgBtnHoverSearch: rgb(255, 217, 0);
+    --borderBtnSearch: 2px solid rgb(255, 217, 0);
+    --bgSlider: rgb(12, 0, 117);
+    --textCaption: white;
+    --h1Caption: rgb(238, 255, 4);
+    --bgSignin: rgb(46, 0, 95);
+    --colorTxSignin: rgb(235, 247, 10);
+    --btnSignin:rgb(157, 125, 255);
+    --colorbtnSignin:black;
+    --borderBtnSignin: 1px solid rgb(192, 125, 255);
+    --bgBtnRefresh:rgb(255, 255, 255);
+    --borderBtnRefresh: 1px solid rgb(190, 121, 255);
+    --bgBoxCaptcha:rgb(181, 202, 255);
+    --bgBoxTextCaptcha: rgb(181, 202, 255);;
+}
+
 /*style css title page */
 title {
     text-transform: capitalize;
 }
+
+/* ------------------------------------------------------------------------------- */
 
 /* styled all element page */
 * {
@@ -11,11 +39,16 @@ title {
     /* font-family: 'Courier New', Courier, monospace; */
 }
 
+/* ------------------------------------------------------------------------------- */
+
 /* style container page */
 .container {
     width: 100%;
-    background-color: bisque;
+    background-color: var(--bgBody);
+    color: var(--colorTxBody);
 }
+
+/* ------------------------------------------------------------------------------- */
 
 /* style header image */
 .imgHead img {
@@ -40,7 +73,7 @@ title {
 /* style list navbar */
 .listNavbar>li {
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 20px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -49,7 +82,7 @@ title {
 }
 
 .listNavbar>li>a {
-    color: aliceblue;
+    color: var(--colorLinkLi)
 }
 
 /* style hoverd lists navbar */
@@ -84,7 +117,7 @@ a {
 
 /* menu in navbar */
 .menuNav {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bgMenuNav);
     width: 120px;
     text-align: right;
     position: absolute;
@@ -92,7 +125,6 @@ a {
     flex-direction: column;
     opacity: 1;
     visibility: hidden;
-    color: rgb(255, 255, 255);
     text-wrap: wrap;
     box-shadow: 1px 1px 16px 0.6px rgba(0, 0, 0, 0.565);
 }
@@ -103,6 +135,7 @@ a {
     right: 50px;
 }
 
+/* ------------------------------------------------------------------------------- */
 
 /* styled list menu */
 .menuNav #listMenu {
@@ -117,21 +150,24 @@ a {
     -o-border-radius: 0px;
 }
 
-/* hoverd list menu keshoiee */
-.menuNav #listMenu:hover {
-    background-color: rgba(255, 217, 0, 0.51);
-}
-
 /* style menu color text */
 #listMenu {
-    color: black;
+    color: var(--colorMenuNav)
 }
+
+/* hoverd list menu keshoiee */
+.menuNav #listMenu:hover {
+    background-color: var(--hoverMenuNav);
+}
+
 
 /* create menu keshoiee */
 .listNavbar>li:hover .menuNav {
     opacity: 1;
     visibility: visible;
 }
+
+/* ------------------------------------------------------------------------------- */
 
 /* style input */
 /* style input search in section navbar header */
@@ -156,7 +192,7 @@ a {
 
 /* hovered input serch navbar */
 #searchNavbar:hover {
-    background-color: rgba(216, 188, 255, 0.901);
+    background-color: var(--hoverSearchNav);
     transition: all 0.8s ease-in-out;
     -webkit-transition: all 0.8s ease-in-out;
     -moz-transition: all 0.8s ease-in-out;
@@ -166,42 +202,60 @@ a {
 
 /* style button input serch navbar  */
 .btnSearch:hover {
-    background-color: gold;
-    border: 1px solid gold;
-    transition: all 0.6s ease-in-out;
-    -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    -ms-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
+    background-color: var(--bgBtnHoverSearch);
+    border: var(--borderBtnSearch);
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
 }
 
-/* section2:
+/* ------------------------------------------------------------------------------- */
+/* section 2: slider and captions */
+.containerSlider {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--bgSlider);
+}
+
+.captionText {
+    color: var(--textCaption);
+    direction: rtl;
+    margin: 10px;
+    text-transform: capitalize;
+    text-align: justify;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.captionText>h1 {
+    color: var(--h1Caption);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* section3:
         +create signin: when clicked on the link navbar signin
         - move the user signin
 */
 #signin {
-    background-color: rgb(0, 0, 95);
+    background-color: var(--bgSignin);
     width: 700px;
     position: relative;
-    margin: 0 auto;
+    margin: 3% auto;
     padding: 5px;
     display: flex;
-    color: aliceblue;
+    color: var(--colorTxSignin);
 }
 
-/* style image in section login and signin */
+/* style image in section login and signin and image login in right */
 .imgLogin {
     background: url("../images/bgLogin.jpg");
     background-size: 370px;
     background-repeat: no-repeat;
     float: right;
-}
-
-/* style container image login in right */
-.imgLogin {
-    float: right;
     width: 50%;
-    background-color: aqua;
 }
 
 /* style the container signin */
@@ -241,16 +295,15 @@ input {
     outline: none;
 }
 
-
+/* ------------------------------------------------------------------------------- */
 /* style captcha */
 #captchaBackground {
     position: relative;
     top: -146px;
     width: 100%;
     height: 70px;
-    color: black;
-
 }
+
 /* style button submit */
 #submitButton {
     width: 85%;
@@ -258,8 +311,9 @@ input {
     height: 30px;
     top: 115px;
     left: 5px;
-    background-color: rgb(192, 125, 255);
-    border: 1px solid rgb(192, 125, 255);
+    background-color:var(--btnSignin);
+    color: var(--colorbtnSignin);
+    border:var(--borderBtnSignin)
 }
 
 /* style button refresh */
@@ -268,8 +322,8 @@ input {
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-color: rgb(190, 121, 255);
-    border: 1px solid rgb(190, 121, 255);
+    background-color: var(--bgBtnRefresh);
+    border:var(--borderBtnRefresh);
     width: 30px;
     position: relative;
     height: 26px;
@@ -288,19 +342,18 @@ input {
 #captcha {
     width: 40%;
     height: 30px;
-    background-color: rgb(217, 249, 10);
+    background-color:var(--bgBoxCaptcha);
     display: grid;
     position: relative;
     top: 150px;
     left: 20px;
-
-
 }
+
 /* style container boxx text for type captcha */
 #textBox {
     width: 50%;
     height: 30px;
-    background-color: rgb(217, 249, 10);
+    background-color: var(--bgBoxTextCaptcha);
     display: grid;
     position: relative;
     top: 120px;
@@ -308,3 +361,5 @@ input {
     outline: 0;
     border: 1px solid yellow;
 }
+
+/* ------------------------------------------------------------------------------- */

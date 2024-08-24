@@ -40,6 +40,7 @@
                         <li><a href="#">رسیدها</a></li>
                         <li><a href="#">ارتباط با ما</a></li>
                         <li><a href="#">زبان</a></li>
+                        <li><a href="#">پرداخت وجوهات</a></li>
                         <li><a href="#">راهنما</a></li>
                         <li><a href="#signin">ثبت نام</a></li>
                         <!-- search navbar -->
@@ -59,6 +60,26 @@
 
         </header>
         <!-- section two -->
+        <section>
+            <div class="containerSlider">
+                <div class="captionText">
+                    <h1>توضیحات مورد نظر سازمان</h1>
+                    <p>پروفسور حسابی می گفت؛ لذت بردن را یادمان ندادند!!! از گرما مینالیم،از سرما فرار میکنیم. در جمع از
+                        شلوغی کلافه میشویم. و درخلوت از تنهایی بغض میکنیم. تمام هفته منتظر رسیدن تعطیلی هستیم و آخر هفته
+                        هم بی حوصله ایم... همیشه به انتظار به پایان رسیدن روزها هستیم که بهترین روزهای زندگیمان بودند.
+                        زندگی همان لحظاتی بود که میخواستیم بگذرند.. ولی ما همیشه به چیز دیگری فکر میکنیم بی آنکه بدانیم
+                        این روزها تکرار نمیشوند </p>
+                    <p> ازم بپرسن قشنگ‌ترین واژه‌ای که یاد گرفتی چیه؟ میگم پذیرش... پذیرفتن شرایط با تمام سختی‌هاش
+                        پذیرفتن آدما با تمام نقص‌هاشون پذیرفتن اینکه مشکلات هست ولی باید ادامه داد پذیرفتن اینکه گاهی
+                        اشتباه میکنم پذرفتن اینکه من کامل نیستم داشتن پذیرش یعنی پایان دادن تمام دعواها و اختلاف‌ها.️
+                    </p>
+
+                </div>
+                <div class="slider"><img src="./images/slider.jpg" alt="slider"></div>
+            </div>
+        </section>
+
+        <!-- section three -->
         <section>
             <!-- section signin and login -->
             <div id="signin">
@@ -81,12 +102,16 @@
                         <input type="tel" name="tel" id="inputTel" placeholder="لطفا شماره خود را وارد کنید">
                         <!-- code captcha -->
                         <div id="captchaBackground">
+                            <!-- box show captcha -->
                             <canvas id="captcha">captcha text</canvas>
+                            <!-- box text for type captcha -->
                             <input id="textBox" type="text" name="text">
+                            <!-- buttons refresh and submit -->
                             <div id="buttons">
                                 <input id="submitButton" type="submit">
                                 <button id="refreshButton" type="submit"></button>
                             </div>
+                            <!-- show message captcha -->
                             <span id="output"></span>
                         </div>
 
@@ -97,6 +122,10 @@
                 <!-- container image login and signin -->
             </div>
         </section>
+        <!-- section pardakht vojohat -->
+        <div class="vojohat">
+
+        </div>
 
 
     </div>
