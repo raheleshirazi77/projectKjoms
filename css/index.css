@@ -1,28 +1,4 @@
 /* root thems */
-:root {
-    /* color */
-    --bgBody: rgb(246, 240, 255);
-    --colorTxBody: black;
-    --colorLinkLi: rgb(255, 255, 255);
-    --bgMenuNav: white;
-    --hoverMenuNav: rgba(81, 81, 255, 0.273);
-    --colorMenuNav: black;
-    --hoverSearchNav: rgb(221, 196, 255);
-    --bgBtnHoverSearch: rgb(255, 217, 0);
-    --borderBtnSearch: 2px solid rgb(255, 217, 0);
-    --bgSlider: rgb(12, 0, 117);
-    --textCaption: white;
-    --h1Caption: rgb(238, 255, 4);
-    --bgSignin: rgb(46, 0, 95);
-    --colorTxSignin: rgb(235, 247, 10);
-    --btnSignin:rgb(157, 125, 255);
-    --colorbtnSignin:black;
-    --borderBtnSignin: 1px solid rgb(192, 125, 255);
-    --bgBtnRefresh:rgb(255, 255, 255);
-    --borderBtnRefresh: 1px solid rgb(190, 121, 255);
-    --bgBoxCaptcha:rgb(181, 202, 255);
-    --bgBoxTextCaptcha: rgb(181, 202, 255);;
-}
 
 /*style css title page */
 title {
@@ -107,10 +83,8 @@ title {
     color: black;
 }
 
-
 /* style link in list navbar */
 a {
-
     text-decoration: none;
 }
 
@@ -215,6 +189,7 @@ a {
 /* section 2: slider and captions */
 .containerSlider {
     display: flex;
+    flex-direction: row;
     padding: 20px;
     margin: 20px;
     background-color: var(--bgSlider);
@@ -228,6 +203,7 @@ a {
     text-align: justify;
     line-height: 40px;
     font-weight: bold;
+
 }
 
 .captionText>h1 {
@@ -236,15 +212,15 @@ a {
 
 /* ------------------------------------------------------------------------------- */
 /* section3:
-        +create signin: when clicked on the link navbar signin
-        - move the user signin
++create signin: when clicked on the link navbar signin
+- move the user signin
 */
 #signin {
     background-color: var(--bgSignin);
-    width: 700px;
+    width: 900px;
+    height: 500px;
     position: relative;
     margin: 3% auto;
-    padding: 5px;
     display: flex;
     color: var(--colorTxSignin);
 }
@@ -252,14 +228,16 @@ a {
 /* style image in section login and signin and image login in right */
 .imgLogin {
     background: url("../images/bgLogin.jpg");
-    background-size: 370px;
+    background-size: 470px 500px;
     background-repeat: no-repeat;
     float: right;
     width: 50%;
+    height: 500px;
 }
 
 /* style the container signin */
 .login {
+    height: 500px;
     width: 50%;
     float: left;
     background-color: transparent;
@@ -271,95 +249,179 @@ a {
 p {
     padding: 5px;
     margin: 5px;
+    font-size: 26px;
 }
 
 /* style form  */
 .login>form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 12px;
 }
 
 /* style inputs */
 .login>form>input {
-    padding: 5px;
-    margin: 5px;
     width: 90%;
-    height: 30px;
-    outline: none;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+}
+
+.login>form>input:hover {
+    box-shadow: var(--boxshadowInputsLogin);
+    background-color: var(--bgHoverInput);
+    outline: 0;
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
 }
 
 /* style button and input */
 button,
 input {
     outline: none;
+    direction: rtl;
 }
 
 /* ------------------------------------------------------------------------------- */
 /* style captcha */
-#captchaBackground {
-    position: relative;
-    top: -146px;
+/* container captcha */
+.captcha-container {
+    text-align: center;
+    border: 0;
+    padding: 20px;
     width: 100%;
-    height: 70px;
+    height: 200px;
+
+
 }
 
-/* style button submit */
-#submitButton {
-    width: 85%;
-    position: relative;
-    height: 30px;
-    top: 115px;
-    left: 5px;
-    background-color:var(--btnSignin);
-    color: var(--colorbtnSignin);
-    border:var(--borderBtnSignin)
+/*  style captcha input */
+#captchaInput {
+    margin: 10px;
+    border: 0;
+    width: 40%;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 15px;
 }
 
-/* style button refresh */
-#refreshButton {
-    background: url("../images/refresh.png");
-    background-size: 20px;
+/* style message captcha show captcha */
+#message {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#refreshCaptcha {
+    background-image: url("../images/refresh.png");
+    background-color: transparent;
     background-repeat: no-repeat;
-    background-position: 50%;
-    background-color: var(--bgBtnRefresh);
-    border:var(--borderBtnRefresh);
+    background-position: 2px;
+    height: 40px;
     width: 30px;
+    border: 0;
     position: relative;
-    height: 26px;
-    top: 117px;
+    top: 7px;
 }
 
-/* style all buttons */
-#buttons {
-    margin: 7px;
+/* style btn */
+#verifyCaptcha {
+    background-color: var(--bgBtnsCaptcha);
+    color: var(--colorBtnCaptcha);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 12px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px;
+    height: 44px;
+    border: none;
+    outline: 0;
+    width: 60%;
+    border: 0;
+}
+
+/* style when button with mouse the hover */
+
+#verifyCaptcha:hover{
+    background-color:var(--btnsHoverCaptcha);
+    border: var(--btnBorderHoverCaptcha);
+    color: var(--colorBtnsHoverCaptcha);
+    padding: 8px 12px;
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    width: 60%;
+    outline: 0;
+    height: 44px;
+    }
+/* style placeholder capcha input */
+#captchaInput::placeholder {
+    padding-right: 5px;
+}
+
+
+
+/* style canva captcha */
+#captchaCanvas {
+    border: var(--borderCaptchaCanva);
+    background-color: var(--captchaCanva);
+    border-radius: 4px;
+    width: 50%;
+}
+
+.captcha {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
-/* style container show captcha */
-#captcha {
-    width: 40%;
-    height: 30px;
-    background-color:var(--bgBoxCaptcha);
-    display: grid;
-    position: relative;
-    top: 150px;
-    left: 20px;
-}
-
-/* style container boxx text for type captcha */
-#textBox {
-    width: 50%;
-    height: 30px;
-    background-color: var(--bgBoxTextCaptcha);
-    display: grid;
-    position: relative;
-    top: 120px;
-    left: 160px;
-    outline: 0;
-    border: 1px solid yellow;
-}
 
 /* ------------------------------------------------------------------------------- */
+:root {
+    /* color */
+    /* .......... body .......... */
+    --bgBody: rgb(246, 240, 255);
+    --colorTxBody: black;
+    /* .......... navbar .......... */
+    --borderBtnSearch: 2px solid rgb(255, 217, 0);
+    --hoverMenuNav: rgba(81, 81, 255, 0.273);
+    --hoverSearchNav: rgb(221, 196, 255);
+    --bgBtnHoverSearch: rgb(255, 217, 0);
+    --colorLinkLi: rgb(255, 255, 255);
+    --colorMenuNav: black;
+    --bgMenuNav: white;
+    /* .......... slider and captions .......... */
+    --bgSlider: rgb(12, 0, 117);
+    --textCaption: white;
+    --h1Caption: rgb(238, 255, 4);
+    /* .......... signin .......... */
+    --borderBtnRefresh: 1px solid rgb(190, 121, 255);
+    --boxshadowInputsLogin: 1px 5px 3px 2px #000000;
+    --borderBtnSignin: 1px solid rgb(192, 125, 255);
+    --colorTxSignin: rgb(235, 247, 10);
+    --bgHoverInput: rgb(255, 247, 0);
+    --btnSignin: rgb(157, 125, 255);
+    --bgSignin: rgb(46, 0, 95);
+    --bgBtnRefresh: transparent;
+    --colorbtnSignin: black;
+    --colorBtnForm: black;
+    /* .......... captcha .......... */
+    --btnsHoverCaptcha: transparent;
+    --btnBorderHoverCaptcha: 2px solid rgb(233, 210, 3);
+    --borderCaptchaCanva: 1px solid white;
+    --bgBtnsCaptcha: rgb(249, 161, 19);
+    --colorBtnCaptcha: black;
+    --captchaCanva: #eee;
+    --colorBtnsHoverCaptcha: white;
+
+}
