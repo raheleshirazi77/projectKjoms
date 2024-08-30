@@ -40,8 +40,8 @@
                         <li><a href="#">رسیدها</a></li>
                         <li><a href="#">ارتباط با ما</a></li>
                         <li><a href="#">زبان</a></li>
-                        <li><a href="#">پرداخت وجوهات</a></li>
-                        <li><a href="#">راهنما</a></li>
+                        <li><a href="#vojohat">پرداخت وجوهات</a></li>
+                        <li><a href="#containerSlider">راهنما</a></li>
                         <li><a href="#signin">ثبت نام</a></li>
                         <!-- search navbar -->
                         <div class="searchNavbar">
@@ -61,7 +61,7 @@
         </header>
         <!-- section two -->
         <section>
-            <div class="containerSlider">
+            <div id="containerSlider">
                 <div class="captionText">
                     <h1>توضیحات مورد نظر سازمان</h1>
                     <p>پروفسور حسابی می گفت؛ لذت بردن را یادمان ندادند!!! از گرما مینالیم،از سرما فرار میکنیم. در جمع از
@@ -123,12 +123,99 @@
             </div>
         </section>
         <!-- section pardakht vojohat -->
-        <div class="vojohat">
-            <div class="title">
-                <h1>پرداخت وجوهات</h1>
+        <div id="vojohat">
+
+            <div class="formVojohat">
+                <h2>فرم ثبت نام در سامانه پرداخت وجوهات</h2>
+                <form id="registrationForm">
+                    <input type="text" id="fullName" placeholder="نام و نام خانوادگی" required>
+
+                    <input type="email" id="email" placeholder="ایمیل" required>
+
+
+                    <input type="tel" id="homePhone" placeholder="شماره تلفن ثابت" required>
+
+                    <input type="tel" id="mobilePhone" placeholder="شماره موبایل" required>
+
+                    <button class="" type="submit">تایید</button>
+                </form>
+                <div id="message"></div>
+
+            </div>
+            <!-- section radio button maleor female -->
+            <div class="gender-container">
+                <!-- labal radio button -->
+                <div class="lableRadio">
+                    <hr class="lineLeft">
+                    <hr class="lineRigth">
+                    <h4>جنسیت</h4>
+                </div>
+                <!-- container button female or male -->
+                <div class="containerRdioBtn">
+
+                    <label class="gender-button" for="female">
+                        <input type="radio" id="female" name="gender" value="female" style="display: none;">
+                        زن
+                    </label>
+                    <label class="gender-button" for="male">
+                        <input type="radio" id="male" name="gender" value="male" style="display: none;">
+                        مرد
+                    </label>
+                </div>
+
+            </div>
+            <!-- get resid pardalhti user -->
+            <div class="sendPost">
+                <label>
+                    <input type="checkbox" id="toggleCheckbox"> آدرس را وارد کنید
+                </label>
+
+                <div id="addressInputs" class="address-inputs">
+                    <input type="text" placeholder="آدرس شهر" id="city" required><br>
+                    <input type="text" placeholder="آدرس شهرستان" id="county" required><br>
+                    <input type="text" placeholder="کوچه یا خیابان" id="street" required><br>
+                    <input type="text" placeholder="کد پستی" id="postalCode" required><br>
+                    <button id="submitButton">ارسال اطلاعات</button>
+                </div>
+
+                <div id="message" style="margin-top: 10px;"></div>
+            </div>
+            <!-- section 4: selects options -->
+            <div class="optionsVojohat">
+                <div class="addOptions">
+                    <button id="addNewButton">افزودن جدید</button>
+                </div>
+                <div id="newEntryDiv" class="hidden new-entry">
+                    <select id="optionsSelect">
+                        <option value="" disabled selected hidden>یک مورد را انتخاب کنید</option>
+                        <option value="option1">گزینه ۱</option>
+                        <option value="option2">گزینه ۲</option>
+                        <option value="option3">گزینه ۳</option>
+                    </select>
+                </div>
             </div>
 
+            <!--  -->
+            <!-- <div class="selectVojohat">
+                <button id="showOptionsButton">افزودن جدید</button>
+                <select id="optionsSelect" onchange="handleSelection()" required>
+                    <option value="" disabled selected hidden>یک گزینه انتخاب کنید</option>
+                    <option value="option1">گزینه ۱</option>
+                    <option value="option2">گزینه ۲</option>
+                    <option value="option3">گزینه ۳</option>
+                </select>
+                <label class="select-message">یک گزینه انتخاب کنید</label>
+            </div> -->
+            
+            
+            
+            
         </div>
+        </form>
+    </div>
+    </div>
+
+    </div>
 
 
     </div>
