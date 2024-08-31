@@ -603,10 +603,11 @@ input {
 /* select Otions vojohat */
 /* container options vojohar */
 .optionsVojohat {
-    width: 50%;
+    width: 24%;
     background-color: #edd906;
     position: relative;
-    left: 29%;
+    left: 513px;
+    bottom: 134px;
     padding: 20px;
     margin: 10px;
 }
@@ -654,7 +655,6 @@ input {
     height: 60px;
     padding: 20px;
     position: relative;
-    top: 10px;
 }
 
 /* style for hide container options */
@@ -664,16 +664,21 @@ input {
 
 /* option select btn */
 #optionsSelect {
-    border-radius: 3px 10px 3px 10px;
+       border-radius: 3px 10px 3px 10px;
     -webkit-border-radius: 3px 10px 3px 10px;
     -moz-border-radius: 3px 10px 3px 10px;
     -ms-border-radius: 3px 10px 3px 10px;
     -o-border-radius: 3px 10px 3px 10px;
     box-shadow: 3px 4px 5px black;
-    height: 30px;
+    height: 35px;
     outline: 0;
-    width: 54%;
+    width: 62%;
     border: 0;
+}
+.containerOptionSelect{
+    position: relative;
+    background: #000;
+    top: 200px;
 }
 
 /*-------------------------------------------------------------------------------*/
