@@ -51,12 +51,12 @@ section vojohat:
 signin data user vojohat :
 */
 document.getElementById('registrationForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // جلوگیری از ارسال فرم
+    event.preventDefault(); // jologiri az send form
 
-    // نمایش پیام ثبت نام
+    // show message signin
     document.getElementById('message').innerText = 'ثبت شدید';
 
-    // پاک کردن فرم
+    //clear form data
     this.reset();
 });
 
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (address && province && county && phoneNumber && street && alley) {
             alert('اطلاعات با موفقیت ثبت شد.');
-            // شما می‌توانید اطلاعات را به سرور ارسال کنید یا در جایی ذخیره کنید
+            // save or send for server!?
             console.log({
                 address,
                 province,
@@ -118,17 +118,17 @@ const addressInputs = document.getElementById('addressInputs');
 const submitButton = document.getElementById('submitButton');
 const messagePost = document.getElementById('message');
 
-// نمایش و پنهان کردن div بر اساس وضعیت چک باکس
+// show or hide checkbox
 toggleCheckbox.addEventListener('change', function () {
     if (this.checked) {
         addressInputs.style.display = 'block';
     } else {
         addressInputs.style.display = 'none';
-        messagePost.textContent = ''; // پاک کردن پیام
+        messagePost.textContent = ''; // cleare mesages
     }
 });
 
-// ارسال اطلاعات
+// send data
 submitButton.addEventListener('click', function () {
     const city = document.getElementById('city').value;
     const county = document.getElementById('county').value;
@@ -137,7 +137,7 @@ submitButton.addEventListener('click', function () {
 
     if (city && county && street && postalCode) {
         messagePost.textContent = 'اطلاعات ثبت شد.';
-        // اینجا می‌توانید اطلاعات را به سرور ارسال کنید
+        // location send data for server
     } else {
         messagePost.textContent = 'لطفاً همه فیلدها را پر کنید.';
     }
@@ -148,10 +148,11 @@ const addNewButton = document.getElementById('addNewButton');
 const newEntryDiv = document.getElementById('newEntryDiv');
 
 addNewButton.addEventListener('click', () => {
-    // تغییر وضعیت نمایش div
+    // change storis show div
     if (newEntryDiv.classList.contains('hidden')) {
-        newEntryDiv.classList.remove('hidden'); // نمایش div
+        newEntryDiv.classList.remove('hidden'); // show div
     } else {
-        newEntryDiv.classList.add('hidden'); // پنهان کردن div
+        newEntryDiv.classList.add('hidden'); // hide div
     }
+    // ------------------------------------------------------------------------------------
 });
