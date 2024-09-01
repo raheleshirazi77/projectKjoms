@@ -264,7 +264,7 @@ p {
     margin: 10px;
     border: 0;
 }
-
+/* style input hover when mouse move on the button */
 .login>form>input:hover {
     box-shadow: var(--boxshadowInputsLogin);
     background-color: var(--bgHoverInput);
@@ -311,7 +311,7 @@ input {
     margin-top: 10px;
     font-size: 16px;
 }
-
+/* style button refresh captcha */
 #refreshCaptcha {
     background-image: url("../images/refresh.png");
     background-color: transparent;
@@ -377,7 +377,7 @@ input {
     border-radius: 4px;
     width: 50%;
 }
-
+/* style captcha */
 .captcha {
     display: flex;
     flex-direction: row;
@@ -388,6 +388,7 @@ input {
 
 
 /* ------------------------------------------------------------------------------- */
+/* style section vojohat and pardakhti */
 #vojohat {
     width: 98%;
     background-color: var(--bgVojohat);
@@ -396,6 +397,7 @@ input {
     padding: 10px;
     margin: 20px;
     overflow: hidden;
+    height: 100%;
 }
 
 /* form data signin vojohat user */
@@ -413,7 +415,7 @@ input {
     width: 99%;
     padding: 18px;
 }
-
+/* style input register form */
 #registrationForm>input {
     width: 28%;
     height: 20px;
@@ -428,7 +430,7 @@ input {
     outline: 0;
     box-shadow: 2px 4px 7px 2px black;
 }
-
+/* style button register form */
 #registrationForm>button {
     width: 37vh;
     padding: 10px;
@@ -449,7 +451,7 @@ input {
     margin: 10px;
     position: relative;
     bottom: 30px;
-    left: 140px;
+    left: 100px;
     font-size: 20px;
 }
 
@@ -458,10 +460,8 @@ input {
     position: relative;
     margin-top: 10px;
     padding: 20px;
-    height: 50px;
     bottom: 80px;
     width: 100%;
-    left: 30px;
 }
 
 /* style  button gender*/
@@ -495,7 +495,7 @@ input {
     border: var(--borderHoverRadioBtn);
 
 }
-
+/* button male or female for style selected button */
 .gender-button.selected {
     background-color: var(--bgSelectedRadioBtn);
     color: var(--colorTxtSelectedRdioBtn);
@@ -508,14 +508,14 @@ input {
     display: none;
     margin-top: 10px;
 }
-
+/* container style send post user with post */
 .sendPost {
     width: 99%;
     padding: 10px;
     margin-top: 30px;
     position: relative;
-    bottom: 109px;
-    left: 91px;
+    bottom: 122px;
+    left: 50px;
 }
 
 /* style checkbox */
@@ -527,14 +527,14 @@ input {
     left: 129px;
     top: 5px;
 }
-
+/* container daryaft resid user with post */
 .residBox {
     font-size: 20px;
     position: relative;
     right: 51px;
     font-weight: bold;
 }
-
+/* style daryaft resid user with post */
 .residBox>h5 {
     position: relative;
     left: 55px;
@@ -546,21 +546,31 @@ input {
     width: 99%;
     padding: 17px;
     position: relative;
-    right: 80px;
+    right: 40px;
+    bottom: 30px;
+}
+/* style hr */
+.hr {
+    width: 99%;
+    position: relative;
+    right: 40px;
+    top: 20px;
+    border: 1px dashed white;
 }
 
+/* style input address user */
 #addressInputs>input {
     width: 26%;
-    padding: 10px;
     margin: 5px;
+    padding: 10px;
     border-radius: 10px 20px 10px 20px;
     -webkit-border-radius: 10px 20px 10px 20px;
     -moz-border-radius: 10px 20px 10px 20px;
     -ms-border-radius: 10px 20px 10px 20px;
     -o-border-radius: 10px 20px 10px 20px;
+    box-shadow: 2px 5px 10px 1px black;
     border: 0;
     outline: 0;
-    box-shadow: 2px 5px 10px 1px black;
 }
 
 /* style button form checkbox for send data user the post */
@@ -604,18 +614,24 @@ input {
 /* container options vojohar */
 .optionsVojohat {
     width: 24%;
-    background-color: #edd906;
+    height: 50px;
     position: relative;
-    left: 513px;
-    bottom: 134px;
+    left: 560px;
+    bottom: 127px;
     padding: 20px;
     margin: 10px;
+    border: 0;
+    outline: 0;
+
 }
-
+/* button add button option */
 .addOptions {
-    background-color: #710bd7;
     padding: 20px;
-
+    height: 50px;
+    width: 276px;
+    position: relative;
+    bottom: 20px;
+    right: 20px;
 }
 
 /* button add new button for add options */
@@ -624,6 +640,9 @@ input {
     background-color: rgb(235, 255, 206);
     width: 70%;
     height: 30px;
+    position: relative;
+    bottom: 10px;
+    right: 136px;
     border-radius: 20px 12px 20px 12px;
     -webkit-border-radius: 20px 12px 20px 12px;
     -moz-border-radius: 20px 12px 20px 12px;
@@ -637,6 +656,7 @@ input {
     -moz-transition: all 0.9s ease-in-out;
     -ms-transition: all 0.9s ease-in-out;
     -o-transition: all 0.9s ease-in-out;
+
 }
 
 /* add new button hover */
@@ -646,15 +666,17 @@ input {
     font-weight: bold;
     font-size: 17px;
     border: 1px solid rgba(162, 255, 182, 0.514);
+
 }
 
 /* container seslect options */
 #newEntryDiv {
-    background-color: aqua;
     width: 100%;
-    height: 60px;
     padding: 20px;
     position: relative;
+    right:130px;
+    bottom: 30px;
+
 }
 
 /* style for hide container options */
@@ -664,21 +686,23 @@ input {
 
 /* option select btn */
 #optionsSelect {
-       border-radius: 3px 10px 3px 10px;
-    -webkit-border-radius: 3px 10px 3px 10px;
-    -moz-border-radius: 3px 10px 3px 10px;
-    -ms-border-radius: 3px 10px 3px 10px;
-    -o-border-radius: 3px 10px 3px 10px;
+    border-radius: 20px 10px 20px 10px;
+    -webkit-border-radius: 20px 10px 20px 10px;
+    -moz-border-radius: 20px 10px 20px 10px;
+    -ms-border-radius: 20px 10px 20px 10px;
+    -o-border-radius: 20px 10px 20px 10px;
     box-shadow: 3px 4px 5px black;
-    height: 35px;
     outline: 0;
-    width: 62%;
+    width: 78%;
     border: 0;
+    padding: 10px;
 }
-.containerOptionSelect{
+/* container sectopn option */
+.containerOptionSelect {
     position: relative;
-    background: #000;
-    top: 200px;
+    top: 20px;
+    padding-top: 20px;
+    height: 800px;
 }
 
 /*-------------------------------------------------------------------------------*/
