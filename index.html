@@ -182,24 +182,30 @@
                 <div id="message" style="margin-top: 10px;"></div>
             </div>
             <!-- section 4: selects options -->
-            <div class="optionsVojohat">
-                <div class="addOptions">
-                    <button id="addNewButton">افزودن جدید</button>
+            <button id="toggleButton">پرداخت وجوهات</button>
+            <div id="paymentDiv" style="display: none;">
+
+                <select id="paymentSelect">
+                    <option value="zakat">زکات</option>
+                    <option value="kaffara">کفارات زکات فطره</option>
+                    <option value="khoms">خمس</option>
+                    <option value="sadaqa">صدقه</option>
+                    <option value="rad_mazalem">رد مظالم</option>
+                    <option value="t-Branaat">تبرعات و امور خیریه</option>
+                </select>
+        
+                <div id="extraButtons" style="display: none;">
+
+                    <button id="sadatButton">سادات</button>
+                    <button id="ghairSadatButton">غیر سادات</button>
                 </div>
-                <div id="newEntryDiv" class="hidden new-entry">
-                    <select id="optionsSelect">
-                        <div class="containerOptionSelect">
-                            <option class="menuOptions" value="" disabled selected hidden>یک مورد را انتخاب کنید
-                            </option>
-                            <option value="option1">گزینه </option>
-                            <option value="option2">گزینه 2</option>
-                            <option value="option3">گزینه 3</option>
-                            <option value="option3">گزینه 4</option>
-                            <option value="option3">گزینه 5</option>
-                            <option value="option3">گزینه 6</option>
-                        </div>
-                    </select>
+        
+                <div id="amountDiv" style="display: none;" >
+                    <input type="number" id="amountInput" placeholder="مقدار را وارد کنید">
+                    <button>ok</button>
                 </div>
+            </div>
+                
             
             </div>
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم پرداخت</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        #paymentDiv {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <button id="toggleButton">پرداخت وجوهات</button>
+    <div id="paymentDiv" style="display: none;">
+        <label for="paymentSelect">نوع پرداخت:</label>
+        <select id="paymentSelect">
+            <option value="zakat">زکات</option>
+            <option value="kaffara">کفارات زکات فطره</option>
+            <option value="khoms">خمس</option>
+            <option value="sadaqa">صدقه</option>
+            <option value="rad_mazalem">رد مظالم</option>
+            <option value="t-Branaat">تبرعات و امور خیریه</option>
+        </select>
+
+        <div id="extraButtons" style="display: none;">
+            <button id="sadatButton">سادات</button>
+            <button id="ghairSadatButton">غیر سادات</button>
+        </div>
+
+        <div id="amountDiv" style="display: none;">
+            <label for="amountInput">مقدار مبلغ:</label>
+            <input type="number" id="amountInput" placeholder="مقدار را وارد کنید">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            const paymentDiv = document.getElementById('paymentDiv');
+            paymentDiv.style.display = paymentDiv.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.getElementById('paymentSelect').addEventListener('change', function () {
+            const selectedValue = this.value;
+            const extraButtons = document.getElementById('extraButtons');
+            const amountDiv = document.getElementById('amountDiv');
+
+            // نمایش دکمه‌ها
+            if (selectedValue === 'zakat') {
+                extraButtons.style.display = 'block';
+            } else {
+                extraButtons.style.display = 'none';
+                amountDiv.style.display = 'none';
+            }
+        });
+
+        // دکمه‌های سادات و غیر سادات
+        document.getElementById('sadatButton').addEventListener('click', function () {
+            document.getElementById('amountDiv').style.display = 'block';
+        });
+
+        document.getElementById('ghairSadatButton').addEventListener('click', function () {
+            document.getElementById('amountDiv').style.display = 'block';
+        });
+
+    </script>
+</body>
+
+</html>

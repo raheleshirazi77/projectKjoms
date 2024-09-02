@@ -44,6 +44,7 @@ title {
     list-style: none;
     justify-content: space-between;
     padding: 5px;
+
 }
 
 /* style list navbar */
@@ -264,6 +265,7 @@ p {
     margin: 10px;
     border: 0;
 }
+
 /* style input hover when mouse move on the button */
 .login>form>input:hover {
     box-shadow: var(--boxshadowInputsLogin);
@@ -311,6 +313,7 @@ input {
     margin-top: 10px;
     font-size: 16px;
 }
+
 /* style button refresh captcha */
 #refreshCaptcha {
     background-image: url("../images/refresh.png");
@@ -377,6 +380,7 @@ input {
     border-radius: 4px;
     width: 50%;
 }
+
 /* style captcha */
 .captcha {
     display: flex;
@@ -415,6 +419,7 @@ input {
     width: 99%;
     padding: 18px;
 }
+
 /* style input register form */
 #registrationForm>input {
     width: 28%;
@@ -430,6 +435,7 @@ input {
     outline: 0;
     box-shadow: 2px 4px 7px 2px black;
 }
+
 /* style button register form */
 #registrationForm>button {
     width: 37vh;
@@ -495,6 +501,7 @@ input {
     border: var(--borderHoverRadioBtn);
 
 }
+
 /* button male or female for style selected button */
 .gender-button.selected {
     background-color: var(--bgSelectedRadioBtn);
@@ -508,6 +515,7 @@ input {
     display: none;
     margin-top: 10px;
 }
+
 /* container style send post user with post */
 .sendPost {
     width: 99%;
@@ -527,6 +535,7 @@ input {
     left: 129px;
     top: 5px;
 }
+
 /* container daryaft resid user with post */
 .residBox {
     font-size: 20px;
@@ -534,6 +543,7 @@ input {
     right: 51px;
     font-weight: bold;
 }
+
 /* style daryaft resid user with post */
 .residBox>h5 {
     position: relative;
@@ -549,6 +559,7 @@ input {
     right: 40px;
     bottom: 30px;
 }
+
 /* style hr */
 .hr {
     width: 99%;
@@ -612,97 +623,97 @@ input {
 /* ----------------------------------------------------------------------------- */
 /* select Otions vojohat */
 /* container options vojohar */
-.optionsVojohat {
-    width: 24%;
-    height: 50px;
+/* button add options  */
+#toggleButton {
     position: relative;
-    left: 560px;
-    bottom: 127px;
-    padding: 20px;
-    margin: 10px;
-    border: 0;
-    outline: 0;
-
-}
-/* button add button option */
-.addOptions {
-    padding: 20px;
-    height: 50px;
-    width: 276px;
-    position: relative;
-    bottom: 20px;
-    right: 20px;
-}
-
-/* button add new button for add options */
-
-#addNewButton {
-    background-color: rgb(235, 255, 206);
-    width: 70%;
-    height: 30px;
-    position: relative;
-    bottom: 10px;
-    right: 136px;
-    border-radius: 20px 12px 20px 12px;
-    -webkit-border-radius: 20px 12px 20px 12px;
-    -moz-border-radius: 20px 12px 20px 12px;
-    -ms-border-radius: 20px 12px 20px 12px;
-    -o-border-radius: 20px 12px 20px 12px;
-    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.594);
-    font-weight: bold;
-    font-size: 14px;
-    transition: all 0.9s ease-in-out;
-    -webkit-transition: all 0.9s ease-in-out;
-    -moz-transition: all 0.9s ease-in-out;
-    -ms-transition: all 0.9s ease-in-out;
-    -o-transition: all 0.9s ease-in-out;
-
-}
-
-/* add new button hover */
-#addNewButton:hover {
-    background: transparent;
-    color: rgb(149, 243, 255);
-    font-weight: bold;
+    bottom: 109px;
+    width: 20%;
+    padding: 5px;
+    border-radius: 10px 20px;
+    -webkit-border-radius: 10px 20px;
+    -moz-border-radius: 10px 20px;
+    -ms-border-radius: 10px 20px;
+    -o-border-radius: 10px 20px;
     font-size: 17px;
-    border: 1px solid rgba(162, 255, 182, 0.514);
-
-}
-
-/* container seslect options */
-#newEntryDiv {
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    right:130px;
-    bottom: 30px;
-
-}
-
-/* style for hide container options */
-.hidden {
-    display: none;
-}
-
-/* option select btn */
-#optionsSelect {
-    border-radius: 20px 10px 20px 10px;
-    -webkit-border-radius: 20px 10px 20px 10px;
-    -moz-border-radius: 20px 10px 20px 10px;
-    -ms-border-radius: 20px 10px 20px 10px;
-    -o-border-radius: 20px 10px 20px 10px;
-    box-shadow: 3px 4px 5px black;
-    outline: 0;
-    width: 78%;
+    font-weight: bold;
     border: 0;
+    outline: 0;
+    background-color: var(--bgButtonVojohat);
+    box-shadow: var(--boxShadowVojohat);
+}
+
+/*  */
+#paymentDiv {
+    position: relative;
+    bottom: 93px;
+}
+
+#paymentSelect {
+    background: var(--bgBoxSelect);
+    border: 0;
+    outline: 0;
+    width: 20%;
+    padding: 5px;
+    border-radius: 22px 15px 23px 10px;
+    direction: rtl;
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 6px;
+}
+
+/* container btns */
+#extraButtons {
+    padding: 5px;
+    position: relative;
+
+    margin-top: 10px;
+
+}
+
+/* btn sadat */
+#sadatButton,
+#ghairSadatButton {
+    font-weight: bold;
+    padding: 4px;
+    background-color: var(--bgBtnSadat);
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    width: 100px;
+}
+
+/* container user entered mony in input and button*/
+#amountDiv {
+    position: relative;
+    width: 200px;
+    left: 464px;
     padding: 10px;
 }
-/* container sectopn option */
-.containerOptionSelect {
-    position: relative;
-    top: 20px;
-    padding-top: 20px;
-    height: 800px;
+
+/* style user entered in button for confirm */
+#amountDiv>button {
+    padding: 4px;
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+    background-color: var(--bgButtonConfrim);
+}
+
+/* style user entered in input mony option */
+#amountDiv>input {
+    padding: 4px;
+    width: 150px;
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -760,5 +771,12 @@ input {
     --colorSubmitButton: rgb(255, 255, 255);
     --bgSubmitButton: rgb(220, 198, 3);
     --boxShadowSubmitBtn: 2px 5px 10px 1px rgb(0, 0, 0);
+
+    /* pardakht vojohat */
+    --bgButtonVojohat: rgb(200, 206, 125);
+    --boxShadowVojohat: 4px 2px 3px 2px black;
+    --bgBoxSelect: rgb(197, 166, 255);
+    --bgBtnSadat: rgb(230, 200, 3);
+    --bgButtonConfrim: yellow;
 
 }

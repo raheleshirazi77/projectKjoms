@@ -144,15 +144,30 @@ submitButton.addEventListener('click', function () {
 });
 // ------------------------------------------------------------------------------------
 // add selecte options
-const addNewButton = document.getElementById('addNewButton');
-const newEntryDiv = document.getElementById('newEntryDiv');
+document.getElementById('toggleButton').addEventListener('click', function () {
+    const paymentDiv = document.getElementById('paymentDiv');
+    paymentDiv.style.display = paymentDiv.style.display === 'none' ? 'block' : 'none';
+});
 
-addNewButton.addEventListener('click', () => {
-    // change storis show div
-    if (newEntryDiv.classList.contains('hidden')) {
-        newEntryDiv.classList.remove('hidden'); // show div
+document.getElementById('paymentSelect').addEventListener('change', function () {
+    const selectedValue = this.value;
+    const extraButtons = document.getElementById('extraButtons');
+    const amountDiv = document.getElementById('amountDiv');
+
+    // نمایش دکمه‌ها
+    if (selectedValue === 'zakat') {
+        extraButtons.style.display = 'block';
     } else {
-        newEntryDiv.classList.add('hidden'); // hide div
+        extraButtons.style.display = 'none';
+        amountDiv.style.display = 'none';
     }
-    // ------------------------------------------------------------------------------------
+});
+
+// دکمه‌های سادات و غیر سادات
+document.getElementById('sadatButton').addEventListener('click', function () {
+    document.getElementById('amountDiv').style.display = 'block';
+});
+
+document.getElementById('ghairSadatButton').addEventListener('click', function () {
+    document.getElementById('amountDiv').style.display = 'block';
 });
