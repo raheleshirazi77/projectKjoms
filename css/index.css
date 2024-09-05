@@ -12,7 +12,7 @@ title {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -24,27 +24,24 @@ title {
     color: var(--colorTxBody);
 }
 
+
 /* ------------------------------------------------------------------------------- */
 
 /* style header image */
-.imgHead img {
+header {
     width: 100%;
 }
-
 /*style navbar */
 .listNavbar {
-    width: 96%;
-    height: 30px;
-    align-items: center;
-    position: relative;
-    left: 20px;
-    bottom: 37px;
-    display: flex;
-    flex-direction: row-reverse;
-    list-style: none;
-    justify-content: space-between;
-    padding: 5px;
-
+width: 100%;
+color: var(--colorLinkLi);
+display: flex;
+flex-direction: row-reverse;
+background: #000;
+list-style-type: none;
+text-wrap: wrap;
+position: relative;
+bottom: 30px;
 }
 
 /* style list navbar */
@@ -157,7 +154,10 @@ a {
 #searchNavbar {
     height: 29px;
     text-indent: 5px;
+    display: flex;
+
 }
+
 
 /* style search navbar placeholder */
 #searchNavbar::placeholder {
@@ -189,11 +189,25 @@ a {
 /* ------------------------------------------------------------------------------- */
 /* section 2: slider and captions */
 #containerSlider {
+    background-color: var(--bgSlider);
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    margin: 20px;
-    background-color: var(--bgSlider);
+    width: 99%;
+    height: 400px;
+    margin: 3% auto;
+}
+
+.slider {
+    overflow: hidden;
+    width: 50%;
+    background-image: url("../images/slider.jpg");
+    background-repeat: no-repeat;
+    background-size: 600px 400px;
+}
+
+.slider>img {
+    float: right;
+    width: 700px;
 }
 
 .captionText {
@@ -204,6 +218,8 @@ a {
     text-align: justify;
     line-height: 40px;
     font-weight: bold;
+    width: 50%;
+    background: #000;
 
 }
 
@@ -218,18 +234,20 @@ a {
 */
 #signin {
     background-color: var(--bgSignin);
-    width: 900px;
-    height: 500px;
-    position: relative;
-    margin: 3% auto;
-    display: flex;
     color: var(--colorTxSignin);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    width: 99%;
 }
 
 /* style image in section login and signin and image login in right */
 .imgLogin {
     background: url("../images/bgLogin.jpg");
-    background-size: 470px 500px;
+    background-size: 420px 500px;
     background-repeat: no-repeat;
     float: right;
     width: 50%;
@@ -394,14 +412,14 @@ input {
 /* ------------------------------------------------------------------------------- */
 /* style section vojohat and pardakhti */
 #vojohat {
-    width: 98%;
+    width: 70%;
     background-color: var(--bgVojohat);
     color: var(--colorVojohat);
     text-align: center;
-    padding: 10px;
-    margin: 20px;
+    position: relative;
+    margin: 3% auto;
     overflow: hidden;
-    height: 100%;
+
 }
 
 /* form data signin vojohat user */
@@ -690,7 +708,7 @@ input {
 #amountDiv {
     position: relative;
     width: 200px;
-    left: 464px;
+    left: 405px;
     padding: 10px;
 }
 
@@ -715,6 +733,8 @@ input {
     padding: 4px;
     width: 150px;
 }
+
+/* waves header footer */
 
 /*-------------------------------------------------------------------------------*/
 :root {
@@ -778,5 +798,217 @@ input {
     --bgBoxSelect: rgb(197, 166, 255);
     --bgBtnSadat: rgb(230, 200, 3);
     --bgButtonConfrim: yellow;
+    /* footer */
+    --mycolor: #6507f2;
+}
+
+/* wave header */
+
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* style css */
+footer {
+    width: 100%;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.formFooter {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 30px;
+}
+
+footer input[type='email'] {
+    width: calc(100vw - 40vw);
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    border: none;
+    color: var(--mycolor);
+}
+
+.copyrights {
+
+    margin: 5px;
+    font-size: 26px;
+    position: relative;
+    top: 47px;
+}
+
+footer input[type='submit'] {
+    border: none;
+    outline: none;
+    border-radius: 0 30px 30px 0;
+    padding: 10px;
+    color: #fff;
+    background: var(--mycolor);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer input:hover[type='submit'] {
+    background: rgba(219, 215, 3, 0.996);
+}
+
+.list-footer {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    position: relative;
+    top: 10px;
+}
+
+.list-footer li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.list-footer li a:hover {
+    color: var(--mycolor);
+}
+
+.social-media {
+    margin: 20px auto;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 15px;
 
 }
+
+.social-media i {
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.social-media i:hover {
+    color: rgb(2, 255, 171);
+}
+
+.instagram , .watsapp {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    width: 200px;
+
+}
+
+.instagram>p , .watsapp>p {
+   font-size: 20px;
+
+}
+
+
+
+@media(max-width:810px) {
+
+    .text,
+    footer input[type='email'],
+    footer input[type='submit'] {
+        font-size: 20px;
+    }
+
+    .list-footer li a {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .social-media i {
+        padding: 10px;
+    }
+}
+
+@media(max-width:610px) {
+
+    .text,
+    footer input[type='email'],
+    footer input[type='submit'] {
+        font-size: 14px;
+    }
+
+    .list-footer li a {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .social-media i {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:470px) {
+    .text {
+        font-size: 12px;
+    }
+
+    .list-footer li a {
+        padding: 5px;
+    }
+}
+
+@media(max-width:330px) {
+    .text {
+        font-size: 10px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* footer wvage bg */
+.path-0 {
+    animation: pathAnim-0 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pathAnim-0 {
+    0% {
+        d: path("M 0,600 L 0,225 C 112.71428571428572,250 225.42857142857144,275 331,257 C 436.57142857142856,239 535.0000000000001,178 669,196 C 802.9999999999999,214 972.5714285714287,311 1107,329 C 1241.4285714285713,347 1340.7142857142858,286 1440,225 L 1440,600 L 0,600 Z");
+    }
+
+    25% {
+        d: path("M 0,600 L 0,225 C 150.21428571428572,237.42857142857144 300.42857142857144,249.85714285714286 403,247 C 505.57142857142856,244.14285714285714 560.5000000000001,226.00000000000003 685,223 C 809.4999999999999,219.99999999999997 1003.5714285714287,232.14285714285714 1141,235 C 1278.4285714285713,237.85714285714286 1359.2142857142858,231.42857142857144 1440,225 L 1440,600 L 0,600 Z");
+    }
+
+    50% {
+        d: path("M 0,600 L 0,225 C 90.82142857142861,254.32142857142858 181.64285714285722,283.64285714285717 325,294 C 468.3571428571428,304.35714285714283 664.2499999999998,295.74999999999994 780,283 C 895.7500000000002,270.25000000000006 931.3571428571429,253.3571428571429 1028,243 C 1124.642857142857,232.6428571428571 1282.3214285714284,228.82142857142856 1440,225 L 1440,600 L 0,600 Z");
+    }
+
+    75% {
+        d: path("M 0,600 L 0,225 C 130.78571428571428,184.71428571428572 261.57142857142856,144.42857142857142 365,178 C 468.42857142857144,211.57142857142858 544.4999999999999,318.99999999999994 677,320 C 809.5000000000001,321.00000000000006 998.4285714285716,215.57142857142858 1135,182 C 1271.5714285714284,148.42857142857142 1355.7857142857142,186.71428571428572 1440,225 L 1440,600 L 0,600 Z");
+    }
+
+    100% {
+        d: path("M 0,600 L 0,225 C 112.71428571428572,250 225.42857142857144,275 331,257 C 436.57142857142856,239 535.0000000000001,178 669,196 C 802.9999999999999,214 972.5714285714287,311 1107,329 C 1241.4285714285713,347 1340.7142857142858,286 1440,225 L 1440,600 L 0,600 Z");
+    }
+}
+
+.containerFormFooter {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */

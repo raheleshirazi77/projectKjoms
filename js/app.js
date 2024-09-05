@@ -171,3 +171,9 @@ document.getElementById('sadatButton').addEventListener('click', function () {
 document.getElementById('ghairSadatButton').addEventListener('click', function () {
     document.getElementById('amountDiv').style.display = 'block';
 });
+// ------------------------------------------------------------------------------------
+const toggleButton = document.getElementsByClassName('toggleButton')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+toggleButton.addEventListener('click' , ()=>{
+    navbarLinks.classList.toggle('active;')
+})
